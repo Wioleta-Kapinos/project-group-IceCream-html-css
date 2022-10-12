@@ -39,3 +39,7 @@
   @include var.fontStyle($size: 20px, $height: 2, $spacing: null, $weight: 700, $style: null);
   @include var.flexBasis(30px, 4);
 }
+
+.icon {
+  fill: red;
+}
