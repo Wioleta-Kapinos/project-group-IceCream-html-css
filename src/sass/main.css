@@ -77,11 +77,64 @@ img {
   margin: 0 auto;
 }
 
+.footer__container {
+  background-color: #FFF5F6;
+}
+.footer__logo--style {
+  font-style: "Titan One", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #FFA5BA;
+}
+.footer__logo--strong-style {
+  font-size: 34px;
+  font-weight: 400;
+  color: #D41443;
+}
 .footer__social-media {
   display: flex;
-  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 28.24px;
+}
+.footer__social-media--box {
+  width: 32px;
+  height: 32px;
+  fill: #fff;
+  border-radius: 50%;
+  background-color: #FEA5BB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .footer__social-media--icon {
-  width: 152.47px;
-  height: 32px;
+  width: 18.82px;
+  height: 18.82px;
+}
+.footer__contact {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+.footer__contact--style {
+  font-style: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  text-align: left;
+}
+.footer__contact--phone-style {
+  color: #D41443;
+}
+.footer__rights {
+  display: flex;
+  flex-direction: column;
+  margin: 65px 0 0 0;
+  padding-top: 65px;
+  padding-bottom: 25px;
+  border-top: 1px solid #E1E1E1;
+}
+.footer__rights--style {
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  color: #907E82;
 }/*# sourceMappingURL=main.css.map */
