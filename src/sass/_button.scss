@@ -1,0 +1,108 @@
+@use './variables' as var;
+@use './global';
+
+.button {
+  @include var.flexBox($direction: row, $justify: center, $align: center, $wrap: null, $gap: null);
+  cursor: pointer;
+  @include var.transitionStyle((background-color, color));
+
+  &__icon {
+    fill: rgba(212, 20, 67, 1);
+    width: 6px;
+    height: 6px;
+  }
+
+  &__icon-stroke {
+    fill: none;
+    stroke: rgba(212, 20, 67, 1);
+
+    &--end {
+      @extend .button__icon-stroke;
+      margin-left: 12px;
+    }
+  }
+
+  &--primary {
+    @extend .button;
+    height: 44px;
+    width: 160px;
+    border: none;
+    border-radius: 22px;
+    @include var.fontStyle($size: 16px, $height: 1.313, $spacing: null, $weight: 700, $style: null);
+    color: rgba(212, 20, 67, 1);
+    background-color: rgba(255, 255, 255, 1);
+
+    &:hover,
+    &:focus {
+      background-color: rgba(236, 235, 235, 1);
+    }
+  }
+
+  &--secondary {
+    @extend .button;
+    padding: 7px 13px;
+    border: none;
+    border-radius: 20px;
+    @include var.fontStyle($size: 8px, $height: 1.25, $spacing: null, $weight: 400, $style: null);
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(212, 20, 67, 1);
+
+    &:hover,
+    &:focus {
+      background-color: rgba(199, 19, 62, 1);
+    }
+  }
+
+  &--tertiary {
+    @extend .button;
+    padding: 7px 13px;
+    border: none;
+    border-radius: 20px;
+    @include var.fontStyle($size: 8px, $height: 1.25, $spacing: null, $weight: 400, $style: null);
+    color: rgba(212, 20, 67, 1);
+    background-color: rgba(255, 255, 255, 1);
+
+    &:hover,
+    &:focus {
+      background-color: rgba(236, 235, 235, 1);
+    }
+  }
+
+  &--round {
+    @extend .button;
+    padding: 6px 6px;
+    border: none;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 1);
+
+    &:hover,
+    &:focus {
+      background-color: rgba(236, 235, 235, 1);
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .button {
+    &__icon {
+      width: 8px;
+      height: 8px;
+    }
+
+    &--secondary,
+    &--tertiary {
+      padding: 11px 22px;
+      @include var.fontStyle(
+        $size: 14px,
+        $height: 1.286,
+        $spacing: null,
+        $weight: 400,
+        $style: null
+      );
+    }
+
+    &--round {
+      padding: 9px 9px;
+    }
+  }
+}
