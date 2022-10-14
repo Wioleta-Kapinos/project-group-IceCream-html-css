@@ -1,0 +1,311 @@
+@use './variables' as var;
+@use './global';
+
+.products {
+  display: flex;
+  justify-content: center;
+  &__container {
+    @extend .container;
+    display: flex;
+    @include var.flexBox(
+      $direction: column,
+      $justify: center,
+      $align: null,
+      $wrap: null,
+      $gap: null
+    );
+    padding: 0 20px;
+  }
+  &__heading-main {
+    @include var.fontStyle(
+      $size: 34px,
+      $height: 39px,
+      $spacing: 0.04em,
+      $weight: 400,
+      $style: normal
+    );
+    font-family: var.$brand-font-family;
+    text-transform: uppercase;
+    text-align: center;
+    color: #d41443;
+    margin-bottom: 144px;
+  }
+  &__heading-secondary {
+    @include var.fontStyle(
+      $size: 18px,
+      $height: 21px,
+      $spacing: null,
+      $weight: 400,
+      $style: normal
+    );
+    font-family: var.$brand-font-family;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffa5ba;
+    margin-bottom: 15px;
+  }
+  &__list {
+    display: flex;
+    @include var.flexBox($direction: row, $justify: null, $align: null, $wrap: wrap, $gap: 130px);
+  }
+  &__item {
+    width: 100%;
+    border-radius: 24px;
+    padding: 161px 41px 41px 39px;
+    display: flex;
+    @include var.flexBox(
+      $direction: column,
+      $justify: null,
+      $align: center,
+      $wrap: null,
+      $gap: null
+    );
+    flex-basis: 100%;
+    &--ice-cream {
+      @extend .products__item;
+      background-color: #ffb8ca;
+    }
+    &--coffee {
+      @extend .products__item;
+      background-color: #f0d1a5;
+    }
+    &--milkshake {
+      @extend .products__item;
+      background-color: #c2e297;
+    }
+  }
+
+  &__heading {
+    @include var.fontStyle(
+      $size: 20px,
+      $height: 23px,
+      $spacing: 0.04em,
+      $weight: 400,
+      $style: normal
+    );
+    font-family: var.$brand-font-family;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    position: relative;
+    margin-bottom: 66px;
+    &::after {
+      content: '';
+      background-image: url('../images/3dots.png');
+      background-repeat: no-repeat;
+      background-size: 26px 6px;
+      position: absolute;
+      width: 26px;
+      height: 6px;
+      left: 50%;
+      margin-left: -13px;
+      bottom: -30px;
+    }
+    &--ice-cream::before {
+      content: '';
+      background-image: url('../images/ice-cream.png');
+      background-repeat: no-repeat;
+      background-size: 249px 252px;
+      position: absolute;
+      top: -271px;
+      left: calc(50% - 123px);
+      width: 249px;
+      height: 252px;
+    }
+    &--coffee::before {
+      content: '';
+      background-image: url('../images/ice-coffee.png');
+      background-repeat: no-repeat;
+      background-size: 249px 252px;
+      position: absolute;
+      top: -275px;
+      left: calc(50% - 123px);
+      width: 249px;
+      height: 252px;
+    }
+    &--milkshake::before {
+      content: '';
+      background-image: url('../images/milkshake.png');
+      background-repeat: no-repeat;
+      background-size: 249px 252px;
+      position: absolute;
+      top: -276px;
+      left: calc(50% - 123px);
+      width: 249px;
+      height: 252px;
+    }
+  }
+  &__description {
+    @include var.fontStyle(
+      $size: 14px,
+      $height: 21px,
+      $spacing: 0.04em,
+      $weight: 700,
+      $style: normal
+    );
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  &__button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color 250ms;
+    &:hover,
+    &:focus {
+      background-color: #ecebeb;
+      transition: background-color 250ms;
+    }
+  }
+  &__button-icon {
+    width: 10px;
+    height: 10px;
+    fill: #c7133e;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .products {
+    &__heading-main {
+      @include var.fontStyle(
+        $size: 48px,
+        $height: 55px,
+        $spacing: null,
+        $weight: null,
+        $style: null
+      );
+      margin-bottom: 150px;
+    }
+    &__heading-secondary {
+      @include var.fontStyle(
+        $size: 26px,
+        $height: 30px,
+        $spacing: null,
+        $weight: null,
+        $style: null
+      );
+    }
+    &__list {
+      gap: 20px;
+      @include var.flexBox(
+        $direction: null,
+        $justify: center,
+        $align: null,
+        $wrap: null,
+        $gap: null
+      );
+    }
+    &__item {
+      padding: 152px 20px 40px 20px;
+      flex-basis: calc((100% - 20px * 2) / 3);
+    }
+    &__heading {
+      &--ice-cream::before {
+        background-size: 220px 226px;
+        top: -254px;
+        left: calc(50% - 107px);
+        width: 220px;
+        height: 226px;
+      }
+      &--coffee::before {
+        background-size: 220px 226px;
+        top: -254px;
+        left: calc(50% - 107px);
+        width: 220px;
+        height: 226px;
+      }
+      &--milkshake::before {
+        background-size: 220px 224px;
+        top: -254px;
+        left: calc(50% - 107px);
+        width: 220px;
+        height: 224px;
+      }
+    }
+    &__description {
+      @include var.fontStyle(
+        $size: 14px,
+        $height: 25px,
+        $spacing: null,
+        $weight: null,
+        $style: null
+      );
+    }
+  }
+}
+@media screen and (min-width: 1280px) {
+  .products {
+    &__heading-main {
+      @include var.fontStyle(
+        $size: 58px,
+        $height: 66px,
+        $spacing: 0.06em,
+        $weight: null,
+        $style: null
+      );
+      margin-bottom: 259px;
+    }
+    &__heading-secondary {
+      @include var.fontStyle(
+        $size: 30px,
+        $height: 34px,
+        $spacing: 0.04em,
+        $weight: null,
+        $style: null
+      );
+    }
+    &__list {
+      @include var.flexBox($direction: null, $justify: null, $align: null, $wrap: null, $gap: 30px);
+    }
+    &__item {
+      max-width: 330px;
+      padding: 163px 44px 50px 44px;
+      flex-basis: calc((100% - 30px * 2) / 3);
+    }
+    &__heading {
+      @include var.fontStyle(
+        $size: 30px,
+        $height: 34px,
+        $spacing: 0.04em,
+        $weight: null,
+        $style: null
+      );
+      margin-bottom: 70px;
+      &--ice-cream::before {
+        background-size: 335px 335px;
+        top: -380px;
+        left: calc(50% - 167px);
+        width: 335px;
+        height: 335px;
+      }
+      &--coffee::before {
+        background-size: 337px 335px;
+        top: -380px;
+        left: calc(50% - 167px);
+        width: 337px;
+        height: 335px;
+      }
+      &--milkshake::before {
+        background-size: 335px 335px;
+        top: -380px;
+        left: calc(50% - 167px);
+        width: 335px;
+        height: 335px;
+      }
+    }
+    &__description {
+      @include var.fontStyle(
+        $size: 16px,
+        $height: 28px,
+        $spacing: null,
+        $weight: null,
+        $style: null
+      );
+    }
+  }
+}
