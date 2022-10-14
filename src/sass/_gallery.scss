@@ -1,0 +1,8 @@
+@use './variables' as var;
+@use './global';
+
+.gallery {
+    &__container {
+        @extend .container;
+    }
+}
