@@ -11,7 +11,7 @@
     background-image: url(../images/hero-ice.png), url(../images/big-pink-dot.png);
     background-size: 171px, 346px;
     background-repeat: no-repeat;
-    background-position: bottom 0 right 32px, bottom 75px right -62px;
+    background-position: bottom 0 right 32px, top 83px right -62px;
     height: 502px;
     padding: 6px 20px;
   }
@@ -71,6 +71,54 @@
     &--accent {
       @include var.fontStyle($size: 48px, $height: 0.958, $spacing: 0, $weight: 400, $style: null);
       color: rgba(212, 20, 67, 1);
+    }
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .header {
+    &__container {
+      background-image: url(../images/hero-icex2.png), url(../images/big-pink-dotx2.png);
+    }
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .header {
+    background-image: url(../images/big-pink-dot.png);
+    background-size: 346px;
+    background-repeat: no-repeat;
+    background-position: calc(50% + 129px) 83px;
+
+    &__container {
+      background-image: url(../images/hero-ice.png);
+      background-size: 171px;
+      background-repeat: no-repeat;
+      background-position: bottom 0 right 32px;
+    }
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) and (min-device-pixel-ratio: 2),
+  (min-width: 480px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-width: 480px) and (max-width: 767px) and (min-resolution: 192dpi),
+  (min-width: 480px) and (max-width: 767px) and (min-resolution: 2dppx) {
+  .header {
+    background-image: url(../images/big-pink-dotx2.png);
+
+    &__container {
+      background-image: url(../images/hero-icex2.png);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    &__container {
+      max-width: 480px;
     }
   }
 }
@@ -208,6 +256,18 @@
   }
 }
 
+@media (min-width: 768px) and (min-device-pixel-ratio: 2),
+  (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-width: 768px) and (min-resolution: 192dpi),
+  (min-width: 768px) and (min-resolution: 2dppx) {
+  .header {
+    &__container {
+      background-image: url(../images/hero-icex2.png), url(../images/tastyx2.png),
+        url(../images/big-pink-dotx2.png), url(../images/bio-ecox2.png);
+    }
+  }
+}
+
 @media (max-width: 1279px) {
   .header__logo-link {
     flex-grow: 1;
@@ -217,8 +277,6 @@
 @media (min-width: 1280px) {
   .header {
     &__container {
-      background-image: url(../images/hero-ice.png), url(../images/tasty.png),
-        url(../images/big-pink-dot.png), url(../images/bio-eco.png);
       background-size: 236px, 293px, 538px, 188px;
       background-repeat: no-repeat;
       background-position: bottom 0 right 450px, bottom 0 right 109px, bottom 75px right 267px,
