@@ -3,4 +3,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"./../images/hero-ice.png":[["hero-ice.b95fd258.png","nZI2"],"nZI2"],"./../images/big-pink-dot.png":[["big-pink-dot.9cee9303.png","Yh0P"],"Yh0P"],"./../images/tasty.png":[["tasty.25f3b528.png","WE7p"],"WE7p"],"./../images/bio-eco.png":[["bio-eco.8ed7cdb7.png","VFR7"],"VFR7"],"./../images/3dots.png":[["3dots.5bada95c.png","vcsj"],"vcsj"],"./../images/ice-cream.png":[["ice-cream.6f556aac.png","PZuq"],"PZuq"],"./../images/ice-coffee.png":[["ice-coffee.638975e3.png","SCfO"],"SCfO"],"./../images/milkshake.png":[["milkshake.f61de870.png","rr1U"],"rr1U"]}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss");
 },{"./sass/main.scss":"clu1"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-html-css-project-group-9/src.627b10db.js.map
+//# sourceMappingURL=/goit-html-css-project-group-9/src.bb7712c8.js.map
