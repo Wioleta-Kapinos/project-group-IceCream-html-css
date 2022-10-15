@@ -1,0 +1,100 @@
+@use './variables' as var;
+@use './global';
+
+.menu-toggle {
+  @include var.flexBox($direction: row, $justify: center, $align: center, $wrap: null, $gap: null);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &__icon-open {
+    fill: rgba(212, 20, 67, 1);
+
+    &:hover {
+      fill: rgba(255, 255, 255, 1);
+    }
+  }
+
+  &__icon-close {
+    stroke: rgba(255, 255, 255, 1);
+
+    &:hover {
+      stroke: rgba(212, 20, 67, 1);
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+// ------------------------------------------------------
+
+.menu-container {
+  @include var.flexBox($direction: column, $justify: null, $align: center, $wrap: null, $gap: null);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  padding: 60px 0;
+  background-color: rgba(225, 121, 146, 1);
+  z-index: 999;
+  transform: translateX(250px);
+  @include var.transitionStyle(transform, 500ms, ease-in-out);
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  & .menu-toggle {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+  }
+}
+
+.mobile-navigation {
+  width: 100%;
+
+  &__list {
+    list-style-type: none;
+    @include var.flexBox($direction: column, $justify: null, $align: null, $wrap: null, $gap: null);
+    margin-top: 19px;
+  }
+
+  &__item {
+    padding: 11px 21px;
+    border-top: 1px solid rgba(225, 130, 152, 1);
+
+    &:last-child {
+      border-bottom: 1px solid rgba(225, 130, 152, 1);
+    }
+  }
+
+  &__link {
+    @extend .link;
+    @include var.fontStyle($size: 14px, $height: 1.286, $spacing: null, $weight: 700, $style: null);
+    color: rgba(255, 255, 255, 1);
+
+    &:hover,
+    &:focus {
+      color: rgba(212, 20, 67, 1);
+    } 
+
+    &--active {
+      @extend .mobile-navigation__link;
+      color: rgba(212, 20, 67, 1);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    &__icon-open {
+      margin-right: 30px;
+    }
+  }
+}
