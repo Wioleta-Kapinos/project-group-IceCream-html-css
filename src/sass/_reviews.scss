@@ -53,6 +53,14 @@
     width: 32px;
     height: 4px;
 }
+.reviews__customer::after{
+    position: absolute;
+    content:"";
+    background-image: url(../images/icons.svg#icon-home);
+    fill: #D31342;
+    width: 12.4px;
+    height: 11.84px;
+}
 .reviews__customer-name{
     padding-top: 18px;
     padding-bottom: 30px;
