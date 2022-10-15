@@ -20,15 +20,17 @@
   <body>
     <!-- W taki sposbu dodajemy fragmenty w główny HTML-plik strony. -->
     <include src="./partials/hero-header.html"></include>
-    <include src="./partials/products.html"></include>
-    
-    
-    <include src="./partials/gallery.html"></include>
-    
-    
+    <main>
+      <include src="./partials/products.html"></include>
+
+      <include src="./partials/gallery.html"></include>
+    </main>
+
     <include src="./partials/mobile-menu.html"></include>
+    <include src="./partials/buy-now-modal.html"></include>
     <!-- Skrypt jest na samym dole kodu. On juz ma w sobie podłączony SAAS plik. -->
     <script src="./index.js"></script>
+    <script src="./buy-now-modal.js"></script>
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
