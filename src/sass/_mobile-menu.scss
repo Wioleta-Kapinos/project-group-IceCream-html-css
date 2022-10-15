@@ -41,7 +41,7 @@
   height: 100%;
   padding: 60px 0;
   background-color: rgba(225, 121, 146, 1);
-  z-index: 999;
+  z-index: 4;
   transform: translateX(250px);
   @include var.transitionStyle(transform, 500ms, ease-in-out);
 
@@ -82,7 +82,7 @@
     &:hover,
     &:focus {
       color: rgba(212, 20, 67, 1);
-    } 
+    }
 
     &--active {
       @extend .mobile-navigation__link;
