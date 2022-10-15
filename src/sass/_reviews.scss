@@ -1,5 +1,6 @@
 @use './variables' as var;
 
+
 .reviews{
     max-width: 768px;
     width: 100%;
@@ -23,8 +24,7 @@
 }
 .reviews__label::before{
     position: absolute;
-    content: "";
-    background-image: url(../images/icons.svg#icon-quote/);
+    content: url("../images/icons.svg#icon-quote");
     fill: #E1E1E1;
     width: 54px;
     height: 40px;
@@ -39,6 +39,9 @@
     padding: 43px 66px 26px 57px;
     line-height: 30.6px;
     min-width: 157px;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    text-decoration-color: #E1E1E1
 }
 // .reviews__label-text::before{
 //     content: "";
@@ -57,16 +60,14 @@
 }
 .reviews__customer::before{
     position: absolute;
-    content: "";
-    background-image: url(../images/icons.svg#icon-three-dots-2);
+    content: url(../images/icons.svg#icon-three-dots-2);
     fill: #C7133E;
     width: 32px;
     height: 4px;
 }
 .reviews__customer::after{
     position: absolute;
-    content:"";
-    background-image: url(../images/icons.svg#icon-home);
+    content: url(../images/icons.svg#icon-home);
     fill: #D31342;
     width: 12.4px;
     height: 11.84px;
