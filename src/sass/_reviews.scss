@@ -21,6 +21,16 @@
     height: 308px;
     background-color: #FAFAFA;
 }
+.reviews__label::before{
+    position: absolute;
+    content: "";
+    background-image: url(../images/icons.svg#icon-quote/);
+    fill: #E1E1E1;
+    width: 54px;
+    height: 40px;
+    margin-left: 61px;
+    margin-top: 28px;
+}
 .reviews__label-text{
     text-align: center;
     font-weight: 500;
@@ -28,15 +38,24 @@
     padding: 43px 66px 26px 57px;
     line-height: 30.6px;
     text-decoration: underline;
-}
-.reviews__label-text::before{
-    content: "";
-    background-image: url(../images/icons.svg#icon-quote/);
+    min-width: 157px;
 }
 .reviews__customer{
+    position: relative;
     text-align: center;
+    margin-top: 30px;
+}
+.reviews__customer::before{
+    position: absolute;
+    content: "";
+    background-image: url(../images/icons.svg#icon-three-dots-2);
+    fill: #C7133E;
+    width: 32px;
+    height: 4px;
 }
 .reviews__customer-name{
     padding-top: 18px;
     padding-bottom: 30px;
+}
+.reviews_nav{
 }
