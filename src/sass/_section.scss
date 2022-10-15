@@ -4,6 +4,10 @@
     padding: 121px 0 98px 0;
     background-color: #fff;
   }
+  
+    &__gallery {
+    background-image: linear-gradient(#FFF5F6 39.7%,#FFFFFF 39.7%,#FFFFFF 60.3%);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -21,3 +25,4 @@
     }
   }
 }
+
