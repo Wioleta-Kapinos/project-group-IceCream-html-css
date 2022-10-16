@@ -5,11 +5,14 @@
 .reviews{
     width: 100%;
     padding: 0 20px;
+    padding-top: 80px;
     @media (min-width: 768px){
         padding: 0 74px;
+        padding-top: 121px
     }
     @media (min-width: 1280px){
         padding: 0 176px 0 178px;
+        padding-top: 123px;
     }
     &__list{
         list-style-type: none;
@@ -41,7 +44,7 @@
         }
         @media (min-width:1280px){
             left: 50px;
-            top: 32px
+            top: 32px;
         }
     }
     &__label-text{
