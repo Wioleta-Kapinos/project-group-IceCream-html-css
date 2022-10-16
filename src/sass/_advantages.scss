@@ -61,10 +61,10 @@
     width: 33px;
     height: 50px;
     content: '';
-    background-image: url(/images/icon1.png);
+    background-image: url(../images/icon1.png);
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url(/images/icon1@2x.png);
+      background-image: url(../images/icon1x2.png);
     }
   }
 
@@ -72,20 +72,20 @@
     width: 50px;
     height: 50px;
     content: '';
-    background-image: url(/images/icon2.png);
+    background-image: url(../images/icon2.png);
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url(/images/icon2@2x.png);
+      background-image: url(../images/icon2x2.png);
     }
   }
   &__box:nth-child(3)::before {
     width: 44px;
     height: 50px;
     content: '';
-    background-image: url(/images/icon3.png);
+    background-image: url(../images/icon3.png);
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url(/images/icon3@2x.png);
+      background-image: url(../images/icon3x2.png);
     }
   }
 
@@ -126,7 +126,7 @@
     @include var.fontStyle(
       $size: 12px,
       $height: 170%,
-      $spacing: none,
+      $spacing: null,
       $weight: 700,
       $style: normal
     );
