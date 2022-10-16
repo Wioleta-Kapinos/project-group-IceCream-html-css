@@ -1,121 +1,167 @@
 @use './variables' as var;
 @use './global';
 
-
-.reviews{
-    width: 100%;
+.reviews {
+  &__container {
+    @extend .container;
+    max-width: 480px;
     padding: 0 20px;
-    padding-top: 80px;
-    @media (min-width: 768px){
-        padding: 0 74px;
-        padding-top: 121px
+    @media (min-width: 768px) {
+      padding: 0 74px;
+      max-width: 1280px;
     }
-    @media (min-width: 1280px){
-        padding: 0 176px 0 178px;
-        padding-top: 123px;
+    @media (min-width: 1280px) {
+      padding: 0 176px 0 178px;
     }
-    &__list{
-        list-style-type: none;
+  }
+  &__list {
+    list-style-type: none;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:nth-of-type(2) {
+      display: none;
     }
-    &__avatar{ 
-        width: 85px;
-        height:85px;
-        object-fit: contain;
-        border-radius: 50%;
-        margin: 0 auto;
-        margin-bottom: 29px;
+    &:nth-of-type(3) {
+      display: none;
     }
-    &__label{
-        position: relative;
-        width: 100%;
-        height: auto;
-        background-color: #FAFAFA;
+  }
+  &__avatar {
+    width: 85px;
+    height: 85px;
+    margin-bottom: 29px;
+  }
+  &__label {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #fafafa;
+  }
+  &__label::before {
+    position: absolute;
+    content: url('../images/quote.png');
+    width: 54px;
+    height: 40px;
+    left: 61px;
+    top: 28px;
+    @media (min-width: 768px) {
+      left: 40px;
+      top: 30px;
     }
-    &__label::before{
-        position: absolute;
-        content: url("../images/quote.png"); 
-        width: 54px;
-        height: 40px;
-        left: 61px;
-        top: 28px;
-        @media (min-width:768px){
-            left: 40px;
-            top: 30px;
-        }
-        @media (min-width:1280px){
-            left: 50px;
-            top: 32px;
-        }
+    @media (min-width: 1280px) {
+      left: 50px;
+      top: 32px;
     }
-    &__label-area{
-        background: repeating-linear-gradient(#FAFAFA, #FAFAFA 71px, #E1E1E1 71px, #E1E1E1 72px, 
-        #FAFAFA 72px, #FAFAFA 103px, #E1E1E1 103px, #E1E1E1 104px, 
-        #FAFAFA 104px, #FAFAFA 135px, #E1E1E1 135px, #E1E1E1 136px, 
-        #FAFAFA 136px, #FAFAFA 167px, #E1E1E1 167px, #E1E1E1 168px, 
-        #FAFAFA 168px, #FAFAFA 199px, #E1E1E1 199px, #E1E1E1 200px, 
-        #FAFAFA 200px, #FAFAFA 231px, #E1E1E1 231px, #E1E1E1 232px, 
-        #FAFAFA 232px, #FAFAFA 263px, #E1E1E1 263px, #E1E1E1 264px, 
-        #FAFAFA 264px, #FAFAFA 295px, #E1E1E1 295px, #E1E1E1 296px)
+  }
+  &__label-area {
+    padding: 43px 50px 26px 50px;
+  }
+  &__label-text {
+    @include var.fontStyle(
+      $size: 12px,
+      $height: 31px,
+      $spacing: 0.04em,
+      $weight: 500,
+      $style: normal
+    );
+    padding: 0 16px 0 7px;
+    position: relative;
+    text-align: center;
+    background: repeating-linear-gradient(transparent 0 calc(31px - 1px), #e1e1e1 0 31px)
+      transparent;
+    @media (min-width: 768px) {
+      @include var.fontStyle(
+        $size: 14px,
+        $height: 30px,
+        $spacing: null,
+        $weight: null,
+        $style: normal
+      );
+      padding: 0 44px 0 20px;
+      background: repeating-linear-gradient(transparent 0 calc(30px - 1px), #e1e1e1 0 30px);
+    }
+    @media (min-width: 1280px) {
+      @include var.fontStyle(
+        $size: 16px,
+        $height: null,
+        $spacing: null,
+        $weight: null,
+        $style: null
+      );
+      padding: 0 35px 0 28px;
+    }
+  }
+  &__location {
+    text-align: center;
+    margin-top: 15px;
+  }
+  &__location::before {
+    content: url(../images/dots.png);
+    display: flex;
+    justify-content: center;
+  }
+  &__location-text {
+    @include var.fontStyle($size: 14px, $height: 26px, $spacing: null, $weight: null, $style: null);
+    padding: 18px 0 30px 0;
+    color: #000000;
+    @media (min-width: 768px) {
+      @include var.fontStyle(
+        $size: 16px,
+        $height: 30px,
+        $spacing: null,
+        $weight: null,
+        $style: normal
+      );
+    }
+    @media (min-width: 1280px) {
+      @include var.fontStyle(
+        $size: 20px,
+        $height: 37px,
+        $spacing: null,
+        $weight: null,
+        $style: normal
+      );
+    }
+  }
+  &__button-list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    gap: 18px;
+  }
+  &__button {
+    width: 12px;
+    height: 12px;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+  }
+  &__button-icon {
+    width: 12px;
+    height: 12px;
+    fill: #d9d9d9;
+    transition: fill 250ms;
+    &--current {
+      width: 12.4px;
+      height: 11.84px;
+      fill: #d31342;
+    }
+    &:hover {
+      fill: #d31342;
+      transition: fill 250ms;
+    }
+  }
+}
 
+@media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .reviews {
+    &__label::before {
+      content: url(../images/quote@2x.png);
     }
-    &__label-text{
-        @include var.fontStyle(
-            $size: 12px,
-            $height: 30.6px,
-            $spacing: 0.04em,
-            $weight: 500,
-            $style: normal
-        );
-        position: relative;
-        text-align: center;
-        padding: 43px 66px 26px 57px;
-
-        @media (min-width: 768px){
-            font-size: 14px;
-        }
-        @media (min-width: 1280px){
-            font-size: 16px;
-        }
+    &__location::before {
+      content: url(../images/dots@2x.png);
     }
-    &__location{
-        text-align: center;
-        margin-top: 15px;
-    }
-    &__location::before{
-        content: url(../images/dots.png);
-        display: flex;
-        justify-content: center;
-    }
-    &__location-text{
-        padding-top: 18px;
-        padding-bottom: 30px;
-    }
-    &__button-list{
-        display: flex;
-        justify-content: center;
-        list-style-type: none;
-        gap: 18px;
-    }
-    &__button{
-        width: 12px;
-        height: 12px;
-        border: none;
-        border-radius: 50%;
-    }
-    }
-    .reviews__item:nth-last-child(2){
-        display: none;
-    }
-    .reviews__item:nth-last-child(1){
-        display: none;
-    }
-    @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx){
-        .reviews{
-            &__label::before{
-                content: url(../images/quote@2x.png);
-            }
-            &__location::before{
-                content: url(../images/dots@2x.png);
-            }
-        }
-    }
+  }
+}
