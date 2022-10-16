@@ -25,7 +25,7 @@
     }
     &__label::before{
         position: absolute;
-        content: url("../images/quote.png");
+        content: url("../images/quote.png"); 
         fill: #E1E1E1;
         width: 54px;
         height: 40px;
@@ -59,6 +59,7 @@
     &__customer::after{
         position: absolute;
         content: url(../images/icons.svg#icon-home);
+        background-image: url(../images/dot.png);
         fill: #D31342;
         width: 12.4px;
         height: 11.84px;
@@ -67,4 +68,14 @@
         padding-top: 18px;
         padding-bottom: 30px;
     }
+    }
+    @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx){
+        .reviews{
+            &__label::before{
+                content: url(../images/quote@2x.png);
+            }
+            &__customer::before{
+                content: url(../images/dots@2x.png);
+            }
+        }
     }
