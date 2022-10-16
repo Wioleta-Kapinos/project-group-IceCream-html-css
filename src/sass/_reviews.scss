@@ -8,19 +8,19 @@
     @media (min-width: 768px){
         padding: 0 74px;
     }
-    @media (min-width: 1200px){
-        padding: 0 177px;
+    @media (min-width: 1280px){
+        padding: 0 176px 0 178px;
     }
-
-    &__image{
-    margin-bottom: 29px;
+    &__list{
+        list-style-type: none;
     }
-    &__image-customer{ 
+    &__avatar{ 
         width: 85px;
         height:85px;
         object-fit: contain;
         border-radius: 50%;
         margin: 0 auto;
+        margin-bottom: 29px;
     }
     &__label{
         position: relative;
@@ -33,15 +33,15 @@
         content: url("../images/quote.png"); 
         width: 54px;
         height: 40px;
-        margin-left: 61px;
-        margin-top: 28px;
+        left: 61px;
+        top: 28px;
         @media (min-width:768px){
-            margin-left: 40px;
-            margin-top: 30px;
+            left: 40px;
+            top: 30px;
         }
-        @media (min-width:1200px){
-            margin-left: 50px;
-            margin-top: 32px
+        @media (min-width:1280px){
+            left: 50px;
+            top: 32px
         }
     }
     &__label-text{
@@ -59,36 +59,59 @@
         @media (min-width: 768px){
             font-size: 14px;
         }
-        @media (min-width: 1200px){
+        @media (min-width: 1280px){
             font-size: 16px;
         }
     }
-    &__customer{
-        position: relative;
+    &__label-text{
+        background: repeating-linear-gradient(#FAFAFA, #FAFAFA 71px, #E1E1E1 71px, #E1E1E1 72px, 
+        #FAFAFA 72px, #FAFAFA 102px, #E1E1E1 102px, #E1E1E1 103px, 
+        #FAFAFA 103px, #FAFAFA 134px, #E1E1E1 134px, #E1E1E1 135px, 
+        #FAFAFA 135px, #FAFAFA 166px, #E1E1E1 166px, #E1E1E1 167px, 
+        #FAFAFA 167px, #FAFAFA 198px, #E1E1E1 198px, #E1E1E1 199px, 
+        #FAFAFA 199px, #FAFAFA 230px, #E1E1E1 230px, #E1E1E1 231px, 
+        #FAFAFA 231px, #FAFAFA 262px, #E1E1E1 262px, #E1E1E1 263px, 
+        #FAFAFA 263px, #FAFAFA 294px, #E1E1E1 294px, #E1E1E1 295px)
+
+    }
+    &__location{
         text-align: center;
-        margin-top: 30px;
+        margin-top: 15px;
     }
-    &__customer::before{
+    &__location::before{
         content: url(../images/dots.png);
+        display: flex;
+        justify-content: center;
     }
-    &__customer::after{
-        position: absolute;
-        content: url(../images/icons.svg#icon-home);
-        fill: #D31342;
-        width: 12.4px;
-        height: 11.84px;
-    }
-    &__customer-name{
+    &__location-text{
         padding-top: 18px;
         padding-bottom: 30px;
     }
+    &__button-list{
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        gap: 18px;
+    }
+    &__button{
+        width: 12px;
+        height: 12px;
+        border: none;
+        border-radius: 50%;
+    }
+    }
+    .reviews__item:nth-last-child(2){
+        display: none;
+    }
+    .reviews__item:nth-last-child(1){
+        display: none;
     }
     @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx){
         .reviews{
             &__label::before{
                 content: url(../images/quote@2x.png);
             }
-            &__customer::before{
+            &__location::before{
                 content: url(../images/dots@2x.png);
             }
         }
