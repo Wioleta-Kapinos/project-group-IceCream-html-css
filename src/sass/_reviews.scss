@@ -1,78 +1,71 @@
 @use './variables' as var;
+@use './global';
 
 
 .reviews{
     max-width: 768px;
     width: 100%;
     padding: 0 20px;
-}
-.reviews__image{
+
+    &__image{
     margin-bottom: 29px;
-}
-.reviews__image-customer{
-    width: 85px;
-    height:85px;
-    object-fit: contain;
-    border-radius: 50%;
-    margin: 0 auto;
-}
-.reviews__label{
-    position: relative;
-    width: 100%;
-    height: auto;
-    background-color: #FAFAFA;
-}
-.reviews__label::before{
-    position: absolute;
-    content: url("../images/icons.svg#icon-quote");
-    fill: #E1E1E1;
-    width: 54px;
-    height: 40px;
-    margin-left: 61px;
-    margin-top: 28px;
-}
-.reviews__label-text{
-    position: relative;
-    text-align: center;
-    font-weight: 500;
-    font-size: 12px;
-    padding: 43px 66px 26px 57px;
-    line-height: 30.6px;
-    min-width: 157px;
-    text-decoration: underline;
-    text-underline-offset: 7px;
-    text-decoration-color: #E1E1E1
-}
-// .reviews__label-text::before{
-//     content: "";
-//     position: absolute;
-//     top: 100%;
-//     width: 100%;
-//     left: 0;
-//     height: 5px;
-//     border-radius: 2px;
-//     background: linear-gradient(111.3deg, #9c27b0 9.6%, #00bcd4 93.6%);
-// }
-.reviews__customer{
-    position: relative;
-    text-align: center;
-    margin-top: 30px;
-}
-.reviews__customer::before{
-    position: absolute;
-    content: url(../images/icons.svg#icon-three-dots-2);
-    fill: #C7133E;
-    width: 32px;
-    height: 4px;
-}
-.reviews__customer::after{
-    position: absolute;
-    content: url(../images/icons.svg#icon-home);
-    fill: #D31342;
-    width: 12.4px;
-    height: 11.84px;
-}
-.reviews__customer-name{
-    padding-top: 18px;
-    padding-bottom: 30px;
-}
+    }
+    &__image-customer{ 
+        width: 85px;
+        height:85px;
+        object-fit: contain;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+    &__label{
+        position: relative;
+        width: 100%;
+        height: auto;
+        background-color: #FAFAFA;
+        background-image: repeating-linear-gradient(red, blue);
+    }
+    &__label::before{
+        position: absolute;
+        content: url("../images/quote.png");
+        fill: #E1E1E1;
+        width: 54px;
+        height: 40px;
+        margin-left: 61px;
+        margin-top: 28px;
+        @media (min-width:768px){
+            margin-left: 40px;
+            margin-top: 30px;
+        }
+        @media (min-width:1200px){
+            margin-left: 50px;
+            margin-top: 32px
+        }
+    }
+    &__label-text{
+        position: relative;
+        text-align: center;
+        font-weight: 500;
+        font-size: 12px;
+        padding: 43px 66px 26px 57px;
+        line-height: 30.6px;
+    }
+    &__customer{
+        position: relative;
+        text-align: center;
+        margin-top: 30px;
+    }
+    &__customer::before{
+        content: url(../images/dots.png);
+    }
+    &__customer::after{
+        position: absolute;
+        content: url(../images/icons.svg#icon-home);
+        fill: #D31342;
+        width: 12.4px;
+        height: 11.84px;
+    }
+    &__customer-name{
+        padding-top: 18px;
+        padding-bottom: 30px;
+    }
+    }
