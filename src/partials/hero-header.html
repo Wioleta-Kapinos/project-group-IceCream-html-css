@@ -3,7 +3,12 @@
     <div class="header__top-container">
       <!-- Logo -->
       <a class="header__logo-link" href="./index.html">
-        <img class="header__logo-image" src="./images/logo.png" alt="Logo firmy Ice-cream" />
+        <img
+          class="header__logo-image"
+          src="./images/logo.png"
+          alt="Logo firmy Ice-cream"
+          srcset="./images/logox2.png 2x"
+        />
       </a>
       <!-- Main navigation -->
       <nav class="navigation">
@@ -34,7 +39,7 @@
         </svg>
       </button>
       <!-- Buy-now button -->
-      <button class="button--primary header__button" type="button">
+      <button class="button--primary header__button" type="button" data-buy-now-modal-open-mobile>
         Buy now
         <svg class="button__icon-stroke--end" width="8" height="10">
           <use href="./images/icons.svg#icon-greater-than"></use>

@@ -10,6 +10,12 @@
     fill: rgba(212, 20, 67, 1);
     width: 6px;
     height: 6px;
+
+    &--big {
+      fill: #c7133e;
+      width: 12px;
+      height: 12px;
+    }
   }
 
   &__icon-stroke {
@@ -24,11 +30,10 @@
 
   &--primary {
     @extend .button;
-    height: 44px;
-    width: 160px;
+    padding: 12px 38px;
     border: none;
     border-radius: 22px;
-    @include var.fontStyle($size: 16px, $height: 1.313, $spacing: null, $weight: 700, $style: null);
+    @include var.fontStyle($size: 16px, $height: 1.25, $spacing: null, $weight: 700, $style: null);
     color: rgba(212, 20, 67, 1);
     background-color: rgba(255, 255, 255, 1);
 
@@ -78,6 +83,31 @@
     &:hover,
     &:focus {
       background-color: rgba(236, 235, 235, 1);
+    }
+  }
+
+  &--round-big {
+    @extend .button;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #fff;
+
+    &:hover,
+    &:focus {
+      background-color: #ecebeb;
+    }
+  }
+
+  &--close {
+    @extend .button;
+    background: transparent;
+    border: none;
+
+    &:hover .button__icon {
+      fill: red;
+      transform: rotate(180deg);
     }
   }
 }
