@@ -7,11 +7,11 @@
 
   &__advantages {
     background-color: #fff5f6;
-    padding: 0 0 139px 0;
+    padding: 0 0 97px 0;
   }
-  
-    &__gallery {
-    background-image: linear-gradient(#FFF5F6 39.7%,#FFFFFF 39.7%,#FFFFFF 60.3%);
+
+  &__gallery {
+    background-image: linear-gradient(#fff5f6 39.7%, #ffffff 39.7%, #ffffff 60.3%);
   }
 }
 
@@ -19,6 +19,10 @@
   .section {
     &__products {
       padding: 122px 0 112px 0;
+    }
+
+    &__advantages {
+      padding: 0 0 140px 0;
     }
   }
 }
@@ -30,4 +34,3 @@
     }
   }
 }
-
