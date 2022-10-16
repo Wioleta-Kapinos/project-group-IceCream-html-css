@@ -3,9 +3,14 @@
 
 
 .reviews{
-    max-width: 768px;
     width: 100%;
     padding: 0 20px;
+    @media (min-width: 768px){
+        padding: 0 74px;
+    }
+    @media (min-width: 1200px){
+        padding: 0 177px;
+    }
 
     &__image{
     margin-bottom: 29px;
@@ -26,7 +31,6 @@
     &__label::before{
         position: absolute;
         content: url("../images/quote.png"); 
-        fill: #E1E1E1;
         width: 54px;
         height: 40px;
         margin-left: 61px;
@@ -41,12 +45,23 @@
         }
     }
     &__label-text{
+        @include var.fontStyle(
+            $size: 12px,
+            $height: 30.6px,
+            $spacing: 0.04em,
+            $weight: 500,
+            $style: normal
+        );
         position: relative;
         text-align: center;
-        font-weight: 500;
-        font-size: 12px;
         padding: 43px 66px 26px 57px;
-        line-height: 30.6px;
+
+        @media (min-width: 768px){
+            font-size: 14px;
+        }
+        @media (min-width: 1200px){
+            font-size: 16px;
+        }
     }
     &__customer{
         position: relative;
