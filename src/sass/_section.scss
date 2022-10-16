@@ -13,6 +13,9 @@
   &__gallery {
     background-image: linear-gradient(#fff5f6 39.7%, #ffffff 39.7%, #ffffff 60.3%);
   }
+  &__contacts {
+    margin-top: 170px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -24,6 +27,9 @@
     &__advantages {
       padding: 0 0 140px 0;
     }
+    &__contacts {
+      margin-top: 197px;
+    }
   }
 }
 
@@ -31,6 +37,9 @@
   .section {
     &__products {
       padding: 127px 0 119px 0;
+    }
+    &__contacts {
+      margin-top: 234px;
     }
   }
 }
