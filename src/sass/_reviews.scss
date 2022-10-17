@@ -32,6 +32,12 @@
     width: 85px;
     height: 85px;
     margin-bottom: 29px;
+    @media (min-width: 768px) {
+      margin-bottom: 19px;
+    }
+    @media (min-width: 1280px) {
+      margin-bottom: 15px;
+    }
   }
   &__label {
     position: relative;
