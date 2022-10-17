@@ -1,0 +1,43 @@
+@use './variables' as var;
+@use './global';
+
+.navigation {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .navigation {
+    display: flex;
+
+    &__list {
+      list-style-type: none;
+      @include var.flexBox($direction: row, $justify: null, $align: null, $wrap: null, $gap: null);
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 35px;
+    }
+
+    &__link {
+      @include var.fontStyle(
+        $size: 16px,
+        $height: 1.313,
+        $spacing: null,
+        $weight: 700,
+        $style: null
+      );
+      text-decoration: none;
+      color: rgba(255, 255, 255, 1);
+
+      &:hover,
+      &:focus {
+        color: rgba(212, 20, 67, 1);
+      }
+
+      &--active {
+        @extend .navigation__link;
+        color: rgba(212, 20, 67, 1);
+      }
+    }
+  }
+}

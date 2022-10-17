@@ -1,0 +1,147 @@
+@use './variables' as var;
+@use './global';
+
+.advantages {
+  &__container {
+    @extend .container;
+    padding-top: 39px;
+    padding-left: 20px;
+
+    @media screen and (max-width: 767px) {
+      max-width: 480px;
+    }
+
+    @media screen and (min-width: 768px) {
+      padding-top: 66px;
+      padding-left: 36px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      padding-top: 66px;
+      padding-left: 115px;
+    }
+  }
+
+  &__heading {
+    display: none;
+  }
+
+  &__list {
+    list-style-type: none;
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 230px);
+    gap: 38px;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(auto-fill, 180px);
+      gap: 12.8%;
+    }
+
+    @media screen and (min-width: 1280px) {
+      grid-template-columns: repeat(auto-fill, 330px);
+      gap: 2.5%;
+    }
+  }
+
+  &__box {
+    width: auto;
+  }
+
+  &__box:nth-child(1)::before,
+  &__box:nth-child(2)::before,
+  &__box:nth-child(3)::before {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
+
+  &__box:nth-child(1)::before {
+    width: 33px;
+    height: 50px;
+    content: '';
+    background-image: url(../images/icon1.png);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/icon1x2.png);
+    }
+  }
+
+  &__box:nth-child(2)::before {
+    width: 50px;
+    height: 50px;
+    content: '';
+    background-image: url(../images/icon2.png);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/icon2x2.png);
+    }
+  }
+  &__box:nth-child(3)::before {
+    width: 44px;
+    height: 50px;
+    content: '';
+    background-image: url(../images/icon3.png);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/icon3x2.png);
+    }
+  }
+
+  &__box-heading {
+    padding-top: 16px;
+    padding-bottom: 12px;
+    font-family: var.$brand-font-family;
+    color: #d41443;
+    @include var.fontStyle(
+      $size: 36px,
+      $height: 100%,
+      $spacing: 0.04em,
+      $weight: 400,
+      $style: normal
+    );
+
+    @media screen and (min-width: 768px) {
+      width: auto;
+      height: auto;
+      font-size: 48px;
+      padding-bottom: 13px;
+      padding-top: 36px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      width: auto;
+      height: auto;
+      font-size: 58px;
+      padding-bottom: 15px;
+      padding-top: 40px;
+    }
+  }
+
+  &__box-description {
+    padding-right: 20px;
+    width: auto;
+    font-family: var.$main-font-family;
+    @include var.fontStyle(
+      $size: 12px,
+      $height: 170%,
+      $spacing: null,
+      $weight: 700,
+      $style: normal
+    );
+
+    @media screen and (min-width: 768px) {
+      width: 180px;
+      font-size: 14px;
+      line-height: 174%;
+      padding-right: 0px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      width: 300px;
+      font-size: 16px;
+      line-height: 176%;
+    }
+  }
+}
