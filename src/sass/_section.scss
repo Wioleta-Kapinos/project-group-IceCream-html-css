@@ -21,10 +21,10 @@
 
   &__gallery {
     background-image: linear-gradient(#fff5f6 39.7%, #ffffff 39.7%, #ffffff 60.3%);
- }
+  }
+
   &__reviews {
     padding: 80px 0 86px 0;
-    }
   }
 }
 
@@ -34,10 +34,15 @@
       padding: 122px 0 112px 0;
     }
 
+    &__about {
+      padding: 130px 0 70px 0;
+      background-image: none;
+    }
+
     &__advantages {
       padding: 0 0 140px 0;
-      }
-      
+    }
+
     &__reviews {
       padding: 121px 0 119px 0;
     }
@@ -50,23 +55,14 @@
       padding: 127px 0 119px 0;
     }
 
+    &__about {
+      padding: 125px 0 39px 0;
+      background-image: url(../images/about-backgroundx2.png);
+      background-position: center 342px;
+    }
+
     &__reviews {
       padding: 123px 0 132px 0;
     }
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .section__about {
-    padding: 130px 0 70px 0;
-    background-image: none;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .section__about {
-    padding: 125px 0 39px 0;
-    background-image: url(../images/about-backgroundx2.png);
-    background-position: center 342px;
-
   }
 }
