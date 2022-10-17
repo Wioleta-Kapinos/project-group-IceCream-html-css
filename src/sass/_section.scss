@@ -1,0 +1,22 @@
+.section__about {
+  padding: 125px 0 39px 0;
+  background: #fff5f6;
+  background-image: url(../images/about-background.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0 768px;
+}
+
+@media screen and (min-width: 768px) {
+  .section__about {
+    padding: 130px 0 70px 0;
+    background-image: none;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .section__about {
+    padding: 125px 0 39px 0;
+    background-image: url(../images/about-backgroundx2.png);
+    background-position: 0 342px;
+  }
+}
