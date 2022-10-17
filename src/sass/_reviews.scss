@@ -69,7 +69,8 @@
     padding: 0 16px 0 7px;
     position: relative;
     text-align: center;
-    background: repeating-linear-gradient(transparent 0px 30px, #e1e1e1 0 31px) transparent;
+    background: repeating-linear-gradient(rgba(255, 255, 255, 0) 1px 31px, #e1e1e1 1px 32px);
+    background-position-y: -1px;
     @media (min-width: 768px) {
       @include var.fontStyle(
         $size: 14px,
@@ -79,7 +80,8 @@
         $style: normal
       );
       padding: 0 44px 0 20px;
-      background: repeating-linear-gradient(transparent 0px 29px, #e1e1e1 0 30px);
+      background: repeating-linear-gradient(rgba(255, 255, 255, 0) 1px 30px, #e1e1e1 1px 31px);
+      background-position-y: -1px;
     }
     @media (min-width: 1280px) {
       @include var.fontStyle(
