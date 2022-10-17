@@ -1,0 +1,170 @@
+@use './variables' as var;
+@use './global';
+
+.about {
+  &__container {
+    padding: 0 20px;
+  }
+  &__heading-secondary {
+    @include var.fontStyle(
+      $size: 18px,
+      $height: 21px,
+      $spacing: null,
+      $weight: 400,
+      $style: normal
+    );
+    font-family: var.$brand-font-family;
+    min-width: 198px;
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffa5ba;
+  }
+  &__heading-main {
+    @include var.fontStyle(
+      $size: 34px,
+      $height: 39px,
+      $spacing: 0.04em,
+      $weight: 400,
+      $style: normal
+    );
+    font-family: var.$brand-font-family;
+    min-width: 200px;
+    margin: 0 41px 0 39px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #d41443;
+  }
+  &__image {
+    min-width: 280px;
+    width: 100%;
+    margin: 26px 0px 46px 0px;
+  }
+  &__article {
+    padding: 0 30px;
+    &-heading,
+    &-text {
+      font-size: 12px;
+      line-height: 19px;
+      width: 100%;
+      min-width: 220px;
+    }
+    &-heading {
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 500;
+      color: #000000;
+      margin-bottom: 28px;
+    }
+    &-text {
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 500;
+      color: #907e82;
+    }
+  }
+  &__button {
+    margin-top: 17px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about {
+    &__container {
+      padding: 0;
+    }
+    &__heading-secondary {
+      @include var.fontStyle(
+        $size: 26px,
+        $height: 30px,
+        $spacing: null,
+        $weight: null,
+        $style: null
+      );
+      margin-bottom: 16px;
+    }
+    &__heading-main {
+      @include var.fontStyle(
+        $size: 48px,
+        $height: 55px,
+        $spacing: null,
+        $weight: null,
+        $style: null
+      );
+      margin-bottom: 50px;
+    }
+    &__content-container {
+      display: flex;
+      flex-direction: row;
+      padding: 0 36px 0 39px;
+      gap: 17px;
+    }
+    &__image {
+      min-width: 340px;
+    }
+    &__article {
+      padding: 50px 36px 0 0;
+      &-heading {
+        color: #000000;
+        font-size: 14px;
+        line-height: 25px;
+        margin-bottom: 28px;
+      }
+      &-text {
+        color: #907e82;
+        font-size: 14px;
+        line-height: 25px;
+      }
+    }
+    &__button {
+      margin-top: 62px;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .about {
+    &__heading-secondary {
+      @include var.fontStyle(
+        $size: 30px,
+        $height: 34px,
+        $spacing: 0.04em,
+        $weight: null,
+        $style: null
+      );
+      margin-bottom: 16px;
+    }
+    &__heading-main {
+      @include var.fontStyle(
+        $size: 58px,
+        $height: 66px,
+        $spacing: 0.06em,
+        $weight: null,
+        $style: null
+      );
+      margin-bottom: 55px;
+    }
+    &__article {
+      padding: 51px 36px 0 0;
+      &-heading {
+        font-size: 16px;
+        line-height: 28px;
+      }
+      &-text {
+        font-size: 14px;
+        line-height: 27px;
+      }
+    }
+    &__content-container {
+      padding: 0 117px 0 112px;
+      gap: 74px;
+    }
+    &__image {
+      min-width: 516px;
+      max-width: 800px;
+    }
+    &__button {
+      margin-top: 45px;
+    }
+  }
+}
