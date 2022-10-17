@@ -3,6 +3,7 @@
 
 .about {
   &__container {
+    @extend .container;
     padding: 0 20px;
   }
   &__heading-secondary {
