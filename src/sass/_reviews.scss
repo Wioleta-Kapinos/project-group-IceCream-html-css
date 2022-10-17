@@ -38,6 +38,13 @@
     width: 100%;
     height: auto;
     background-color: #fafafa;
+    margin-bottom: 30px;
+    @media (min-width: 768px) {
+      margin-bottom: 24px;
+    }
+    @media (min-width: 1280px) {
+      margin-bottom: 15px;
+    }
   }
   &__label::before {
     position: absolute;
@@ -96,7 +103,10 @@
   }
   &__location {
     text-align: center;
-    margin-top: 15px;
+    margin-bottom: 30px;
+    @media (min-width: 768px) {
+      margin-bottom: 35px;
+    }
   }
   &__location::before {
     content: '';
@@ -109,7 +119,7 @@
   }
   &__location-text {
     @include var.fontStyle($size: 14px, $height: 26px, $spacing: null, $weight: null, $style: null);
-    padding: 18px 0 30px 0;
+    margin-top: 18px;
     color: #000000;
     @media (min-width: 768px) {
       @include var.fontStyle(
@@ -119,6 +129,7 @@
         $weight: null,
         $style: normal
       );
+      margin-top: 14px;
     }
     @media (min-width: 1280px) {
       @include var.fontStyle(
@@ -128,6 +139,7 @@
         $weight: null,
         $style: normal
       );
+      margin-top: 15px;
     }
   }
   &__button-list {
