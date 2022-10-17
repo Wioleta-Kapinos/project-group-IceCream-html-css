@@ -1,10 +1,110 @@
 <div class="backdrop is-hidden" data-buy-now-modal>
-  <div class="modal">
-    <button class="button--close modal__button" type="button" data-buy-now-modal-close>
-      <svg class="modal__icon-close" width="14" height="14">
+  <div class="backdrop__container">
+    <button class="close-button" type="button" data-buy-now-modal-close>
+      <svg width="10" height="10">
         <use href="./images/icons.svg#icon-close"></use>
       </svg>
     </button>
-    <!-- Order-now modal content-->
+    <div class="order-form">
+      <a class="order-form__heading">To place an order please complete and submit the form below</a>
+      <form class="order-form__container" name="order-form" autocomplete="on" novalidate>
+        <div class="order-form__area">
+        <div class="order-form__label">
+        <label for="username"><a class="order-form__text">Name</a>
+          <div class="order-form__input-box">
+          <input class="order-form__input input-hovering" type="text" name="username" id="username" required>
+        </div>
+        </label>
+      </div>
+      <div class="order-form__label">
+        <label for="email"><a class="order-form__text">Email</a>
+        <div class="order-form__input-box">
+          <input class="order-form__input input-hovering" type="email" name="email" id="email" required>
+        </div>
+        </label>
+      </div>
+      <div class="order-form__label">
+        <label for="email"><a class="order-form__text">Phone</a>
+          <div class="order-form__input-box">
+          <input class="order-form__input input-hovering" type="tel" name="phone-number" id="phone-number" required>
+        </div>
+        </label>
+      </div>
+      <div class="order-form__order">
+        <div class="order-form__products">
+          <div class="order-form__flavour">
+            <a class="order-form__text-min">Ice-cream flavour</a>
+      <select name="ice-cream" placeholder="Ice cream flavour">
+        <option value="vanilla">Vanilla </option>
+        <option value="chocolate">Chocolate</option>
+        <option value="strawberry">Strawberry</option>
+        <option value="carmel">Carmel</option>
+        </select>
+      </div>
+      <div class="order-form__amount">
+        <a class="order-form__text-min">Amount</a>
+        <select name="ice-cream-amount" placeholder="Amount">
+          <option value="250g">250g</option>
+          <option value="1kg">1kg</option>
+          <option value="2.3l">2.3l</option>
+          <option value="5l">5l</option>
+          </select>
+        </div>
+      </div>
+        <div class="order-form__products">
+          <div class="order-form__flavour">
+            <a class="order-form__text-min">Ice coffee flavour</a>
+      <select name="ice-coffee">
+        <option value="vanilla" selected>Vanilla</a></option>
+        <option value="chocolate">Chocolate</a></option>
+        <option value="strawberry">Strawberry</a></option>
+        <option value="carmel">Carmel</a></option>
+        </select>
+        </div>
+        <div class="order-form__amount">
+        <a class="order-form__text-min">Amount</a>
+        <select name="ice-coffee-amount">
+          <option value="2l" selected>2l</option>
+          <option value="50l">50l</option>
+          <option value="250l">250l</option>
+          <option value="500l">500l</option>
+          </select>
+        </div>
+      </div>
+      <div class="order-form__products">
+        <div class="order-form__flavour">
+          <a class="order-form__text-min">Milkshakes flavour</a>
+    <select name="milkshakes">
+      <option value="vanilla" selected>Vanilla </option>
+      <option value="chocolate">Chocolate</option>
+      <option value="strawberry">Strawberry</option>
+      <option value="carmel">Carmel</option>
+      </select>
+      </div>
+      <div class="order-form__amount">
+      <a class="order-form__text-min">Amount</a>
+      <select name="milkshakes-amount">
+        <option value="2l" selected>2l</option>
+        <option value="50l">50l</option>
+        <option value="250l">250l</option>
+        <option value="500l">500l</option>
+        </select>
+      </div>
+    </div>
   </div>
-</div>
+      <div class="order-form__label-comment">
+        <label for="comment"><a class="order-form__text">In case of any questions please type them below. We will contact you as soon as possible.</a>
+          <div class="order-form__input-box">
+          <textarea class="order-form__comment-input input-hovering" placeholder="Type your questions" name="comment" id="comment"></textarea>
+      </div>  
+        </label> 
+    </div>
+  </div>
+          <div class="order-button">
+            <button class="order-button__container" type="submit" data-buy-now-modal-close><span class="order-button__text">Submit</span>
+            </button>
+          </div>
+</form>
+  </div>
+  </div>
+  </div>
