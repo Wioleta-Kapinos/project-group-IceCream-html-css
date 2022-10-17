@@ -4,40 +4,57 @@
 .backdrop {
   position: fixed;
   left: 0;
+  right: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  @include var.transitionStyle((transform, opacity, visibility), 1250ms, ease-in-out);
-  transform: scale(1);
-  opacity: 1;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 600ms ease-in-out, visibility 600ms ease-in-out;
   visibility: visible;
-  z-index: 5;
+  z-index: 999;
 }
 
-.modal {
+.backdrop__container {
   position: absolute;
-  z-index: 6;
-  top: 50%;
+  width: 400px;
+  height: 620px;
+  border-radius: 4px;
   left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
-  width: 500px;
-  background-color: rgba(255, 255, 255, 1);
-  border-radius: 22px;
-  padding: 40px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 184, 202, 1) 19%,
+    rgba(240, 209, 165, 0.9467320375415791) 56%,
+    rgba(194, 226, 151, 1) 100%
+  );
 
-  &__button {
-    position: absolute;
-    top: 14px;
-    right: 14px;
+  @media screen and (min-width: 768px) {
+    width: 450px;
+    height: 650px;
+  }
+}
+
+.close-button {
+  position: relative;
+  left: 362px;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  @include var.flexBox(row, center, center);
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  pointer-events: visible;
+  stroke: #d41443;
+
+  @media screen and (min-width: 768px) {
+    left: 410px;
   }
 
-  &__icon-close {
-    stroke: rgba(212, 20, 67, 1);
-
-    &:hover {
-      stroke: rgb(187, 187, 187);
-    }
+  &:hover,
+  &:focus {
+    background-color: #ffffffb6;
   }
 }
 
@@ -45,18 +62,189 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transform: scale(3);
 }
 
-@media (max-width: 767px) {
-  .modal {
-    width: 300px;
-    padding: 30px;
+.order-form {
+  position: relative;
+  width: 400px;
+  height: 620px;
+  padding: 5px 40px 40px 40px;
+
+  @media screen and (min-width: 768px) {
+    width: 450px;
+    height: 650px;
+    padding: 16px 40px 40px 40px;
+  }
+
+  &__heading {
+    text-align: center;
+    margin-bottom: 12px;
+    @include var.fontStyle(14px, 23px, 0.04em, 400, normal);
+    font-family: var.$brand-font-family;
+    text-transform: uppercase;
+    color: #d41443;
+    @include var.flexBox(row, center, center);
+
+    @media screen and (min-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  &__text {
+    font-family: var.$brand-font-family;
+    @include var.fontStyle(12px, 23px, 0.04em, 400, normal);
+    text-transform: uppercase;
+    color: #d41443;
+
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+    }
+  }
+
+  &__text-min {
+    font-family: var.$brand-font-family;
+    @include var.fontStyle(12px, 23px, 0.04em, 400, normal);
+    text-transform: uppercase;
+    color: #d41443;
+  }
+
+  &__area {
+    padding: 12px;
+    background: #ffffff96;
+  }
+
+  &__label {
+    padding-left: 5px;
+    padding-right: 5px;
+
+    &:focus-within .order-form__text {
+      color: #e71b4e;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding-left: 5px;
+    font-family: var.$main-font-family;
+    @include var.fontStyle(10px, 23px, 0.04em, 400, normal);
+    border: none;
+
+    &:focus {
+      border: 1px solid #f0d1a5;
+      transform: scale(101%);
+    }
+  }
+
+  &__flavour select {
+    background-color: #ffffff;
+    border: 1px dotted #f0d1a5;
+    width: 100px;
+    height: 22px;
+  }
+
+  &__amount select {
+    width: 55px;
+    height: 22px;
+    background-color: #ffffff;
+    border: 1px dotted #f0d1a5;
+  }
+
+  &__label-comment {
+    text-align: center;
+    padding: 10px 2px 0px 2px;
+
+    &:focus-within .order-form__text {
+      color: #e71b4e;
+    }
+  }
+
+  &__comment-input {
+    background-color: #ffffff;
+    border: 1px dotted #f0d1a5;
+    width: 100%;
+    padding-left: 5px;
+    font-family: var.$main-font-family;
+    @include var.fontStyle(10px, 23px, 0.04em, 400, normal);
+    resize: none;
+    outline: none;
+    margin-top: 5px;
+
+    &:focus {
+      transform: scale(101%);
+      border: 1px solid #f0d1a5;
+    }
+  }
+
+  & select,
+  & option {
+    font-family: var.$main-font-family;
+    @include var.fontStyle(10px, 23px, 0.04em, 400, normal);
+
+    &:hover,
+    &:focus {
+      transform: scale(110%);
+      border: 1px solid #f0d1a5;
+    }
+  }
+
+  &__order {
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 28px;
+
+    @media screen and (min-width: 768px) {
+      margin-left: 40px;
+    }
+  }
+
+  &__products {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+  }
+
+  &__flavour {
+    width: 150px;
+  }
+
+  &__amount {
+    width: 80px;
   }
 }
 
-@media (max-width: 1279px) {
-  .modal {
-    width: 400px;
+textarea::placeholder {
+  font-family: var.$main-font-family;
+  @include var.fontStyle(10px, 23px, 0.04em, 400, normal);
+}
+
+.order-button {
+  margin-top: 10px;
+  width: 100%;
+  @include var.flexBox(row, center, center);
+
+  @media screen and (min-width: 768px) {
+    margin-top: 18px;
+  }
+
+  &__container {
+    width: 80px;
+    height: 30px;
+    background: #ffffff;
+    border: 1px dotted #f0d1a5;
+
+    &:hover,
+    &:focus {
+      background: #ffffffb6;
+    }
+  }
+
+  &__text {
+    font-family: var.$brand-font-family;
+    @include var.fontStyle(14px, 23px, 0.04em, 400, normal);
+    text-transform: uppercase;
+    color: #d41443;
   }
 }
