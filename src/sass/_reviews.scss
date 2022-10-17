@@ -98,9 +98,13 @@
     margin-top: 15px;
   }
   &__location::before {
-    content: url(../images/dots.png);
-    display: flex;
-    justify-content: center;
+    content: '';
+    background-image: url(../images/dots.png);
+    background-size: 100%;
+    width: 32px;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
   }
   &__location-text {
     @include var.fontStyle($size: 14px, $height: 26px, $spacing: null, $weight: null, $style: null);
@@ -158,10 +162,18 @@
 @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .reviews {
     &__label::before {
-      content: url(../images/quote@2x.png);
+      content: '';
+      background-image: url(../images/quote@2x.png);
+      background-size: 100%;
+      width: 54px;
+      height: 40px;
     }
     &__location::before {
-      content: url(../images/dots@2x.png);
+      content: '';
+      background-image: url(../images/dots@2x.png);
+      background-size: 100%;
+      width: 32px;
+      height: 4px;
     }
   }
 }
