@@ -159,6 +159,9 @@ iframe {
       color: #907e82;
       text-decoration: none;
     }
+    &__address:hover, &__address:focus{
+      color: deepskyblue;
+    }
   }
   .btn {
     align-self: center;
