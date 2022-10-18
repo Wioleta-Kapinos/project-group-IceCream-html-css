@@ -8,10 +8,18 @@
   &__about {
     padding: 125px 0 39px 0;
     background: #fff5f6;
-    background-image: url(../images/about-background.png);
-    background-size: contain;
+    background-image: url(../images/about-background-left.png),
+      url(../images/about-background-right.png);
+    background-size: auto 133px, auto 133px;
     background-repeat: no-repeat;
-    background-position: 0 768px;
+    background-position: left 0 bottom 60px, right 0 bottom 60px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/about-background-leftx2.png),
+        url(../images/about-background-rightx2.png);
+    }
   }
 
   &__advantages {
@@ -26,11 +34,11 @@
   &__reviews {
     padding: 80px 0 0 0;
   }
-  
+
   &__contacts {
     margin-top: 170px;
     background-color: #fff5f6;
- }
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -51,7 +59,7 @@
     &__reviews {
       padding: 121px 0 0 0;
     }
-    
+
     &__contacts {
       margin-top: 197px;
     }
@@ -66,16 +74,38 @@
 
     &__about {
       padding: 125px 0 39px 0;
-      background-image: url(../images/about-backgroundx2.png);
-      background-position: center 342px;
+      background-image: url(../images/about-background-left.png),
+        url(../images/about-background-right.png);
+      background-size: auto 534px, auto 534px;
+      background-repeat: no-repeat;
+      background-position: left 0 bottom -65px, right 0 bottom -65px;
+
+      @media screen and (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/about-background-leftx2.png),
+          url(../images/about-background-rightx2.png);
+      }
     }
 
     &__reviews {
       padding: 123px 0 0 0;
     }
-    
+
     &__contacts {
       margin-top: 234px;
+      background-image: url(../images/contacts-background-left.png),
+        url(../images/contacts-background-right.png);
+      background-size: auto 382px, auto 382px;
+      background-repeat: no-repeat;
+      background-position: left 0 top 102px, right 0 top 102px;
+
+      @media screen and (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/contacts-background-leftx2.png),
+          url(../images/contacts-background-rightx2.png);
+      }
     }
   }
 }
