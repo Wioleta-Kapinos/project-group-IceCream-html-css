@@ -94,7 +94,7 @@
       width: 26px;
       height: 6px;
       left: calc(50% - 13px);
-      bottom: -30px;
+      bottom: -35px;
     }
     &--image {
       content: '';
@@ -225,6 +225,9 @@
         $weight: null,
         $style: null
       );
+      &::after {
+        bottom: -38px;
+      }
       margin-bottom: 70px;
       &--image {
         bottom: calc(100% + 38px);
