@@ -1,10 +1,14 @@
 @use './global';
+@use './variables';
 @use './section';
 @use './button';
 @use './mobile-menu';
 @use './navigation';
 @use './hero-header';
 @use './products';
-@use './contacts';
+@use './about';
 @use './advantages';
 @use './gallery';
+@use './reviews';
+@use './contacts';
+@use './footer';
