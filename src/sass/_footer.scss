@@ -1,0 +1,156 @@
+@use './variables' as var;
+@use './global';
+
+.footer {
+  background-color: #fff5f6;
+
+  &__container {
+    @extend .container;
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 43px;
+  }
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    padding-left: 22px;
+  }
+  &__logo-text {
+    font-family: var.$brand-font-family;
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffa5ba;
+    width: 232px;
+    line-height: 21px;
+  }
+  &__logo-text--strong {
+    font-family: var.$brand-font-family;
+    font-size: 34px;
+    font-weight: 400;
+    color: #d41443;
+    width: 200px;
+    line-height: 39px;
+  }
+  &__contact-box {
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+  }
+  &__social-media {
+    display: flex;
+    justify-content: flex-end;
+    gap: 28.24px;
+    padding-right: 20.5px;
+  }
+  &__contact {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+  }
+  &__contact-text {
+    font-family: var.$main-font-family;
+    font-weight: 700;
+    font-size: 13px;
+    text-align: left;
+    text-decoration: none;
+  }
+  &__contact-text--phone {
+    color: #d41443;
+    text-decoration: none;
+  }
+  &__copyright {
+    display: flex;
+    flex-direction: column;
+    margin: 65px 0 0 0;
+    padding-top: 22px;
+    padding-bottom: 25px;
+    border-top: 1px solid #e1e1e1;
+  }
+  &__copyright-text {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    color: #907e82;
+    line-height: 152%;
+  }
+}
+.social-media {
+  width: 32px;
+  height: 32px;
+  fill: #fff;
+  border-radius: 50%;
+  background-color: #fea5bb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-media__icon {
+  width: 18.82px;
+  height: 18.82px;
+}
+
+.social-media:hover,
+.social-media:focus {
+  background-color: #d41443;
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    &__container {
+      max-width: 480px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    &__box {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-between;
+      padding-top: 5px;
+    }
+    &__logo-text {
+      font-size: 26px;
+      width: 340px;
+      line-height: 30px;
+    }
+    &__logo-text--strong {
+      font-size: 48px;
+      width: 340px;
+      line-height: 55px;
+    }
+    &__social-media {
+      gap: 36px;
+    }
+    &__copyright {
+      margin: 91px 0 0 0;
+      padding: 29px 0 18px 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer {
+    &__logo-text {
+      font-size: 30px;
+      width: 472px;
+      line-height: 34px;
+    }
+    &__logo-text--strong {
+      font-size: 58px;
+      width: 474px;
+      line-height: 66px;
+    }
+    &__contact {
+      gap: 50px;
+    }
+  }
+}

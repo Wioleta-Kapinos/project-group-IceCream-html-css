@@ -2,7 +2,17 @@
 @use './global';
 
 .gallery {
+  background-image: linear-gradient(#fff5f6 39.7%, #ffffff 39.7%, #ffffff 60.3%);
+
+  &__container {
+    @extend .container;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .gallery {
     &__container {
-        @extend .container;
+      max-width: 480px;
     }
+  }
 }

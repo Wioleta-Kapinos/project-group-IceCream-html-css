@@ -3,6 +3,17 @@
 
 .products {
   @include var.flexBox($direction: null, $justify: center, $align: null, $wrap: null, $gap: null);
+  padding: 121px 0 98px 0;
+  background-color: #fff;
+
+  @media screen and (min-width: 768px) {
+    padding: 122px 0 112px 0;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 127px 0 119px 0;
+  }
+
   &__container {
     @extend .container;
     @include var.flexBox(
@@ -50,6 +61,7 @@
     max-width: 440px;
     border-radius: 24px;
     padding: 161px 41px 41px 39px;
+    flex-basis: 100%;
     @include var.flexBox(
       $direction: column,
       $justify: null,
@@ -57,7 +69,6 @@
       $wrap: null,
       $gap: null
     );
-    flex-basis: 100%;
     &--ice-cream {
       @extend .products__item;
       background-color: #ffb8ca;
@@ -94,7 +105,7 @@
       width: 26px;
       height: 6px;
       left: calc(50% - 13px);
-      bottom: -30px;
+      bottom: -35px;
     }
     &--image {
       content: '';
@@ -225,6 +236,9 @@
         $weight: null,
         $style: null
       );
+      &::after {
+        bottom: -38px;
+      }
       margin-bottom: 70px;
       &--image {
         bottom: calc(100% + 38px);

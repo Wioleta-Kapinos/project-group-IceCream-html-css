@@ -1,7 +1,6 @@
 @use './global';
-@use './section';
+@use './variables';
 @use './button';
-@use './buy-now-modal';
 @use './mobile-menu';
 @use './navigation';
 @use './hero-header';
@@ -9,4 +8,8 @@
 @use './about';
 @use './advantages';
 @use './gallery';
-
+@use './reviews';
+@use './contacts';
+@use './footer';
+@use './buy-now-modal';
+@use './our-locations-modal';
