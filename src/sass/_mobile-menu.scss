@@ -19,9 +19,11 @@
 
   &__icon-close {
     stroke: rgba(255, 255, 255, 1);
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover {
       stroke: rgba(212, 20, 67, 1);
+      transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
 }
