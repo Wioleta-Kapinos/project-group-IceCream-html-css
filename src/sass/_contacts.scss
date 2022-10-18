@@ -172,13 +172,6 @@
 }
 
 @media only screen and (min-width: 1280px) {
-  .section__contacts {
-    background-image: url(../images/contacts-background.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100vw;
-  }
-
   .btn {
     &__container {
       padding-bottom: 165px;
@@ -202,10 +195,5 @@
         font-size: 16px;
       }
     }
-  }
-}
-@media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .contacts-bgc {
-    background-image: url(../images/about-backgroundx2.png);
   }
 }
