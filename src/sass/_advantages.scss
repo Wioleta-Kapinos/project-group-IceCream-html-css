@@ -2,6 +2,13 @@
 @use './global';
 
 .advantages {
+  background-color: #fff5f6;
+  padding: 0 0 97px 0;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 0 140px 0;
+  }
+
   &__container {
     @extend .container;
     padding-left: 20px;

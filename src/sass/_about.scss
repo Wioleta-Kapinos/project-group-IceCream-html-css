@@ -2,6 +2,40 @@
 @use './global';
 
 .about {
+  padding: 125px 0 39px 0;
+  background: #fff5f6;
+  background-image: url(../images/about-background-left.png),
+    url(../images/about-background-right.png);
+  background-size: auto 133px, auto 133px;
+  background-repeat: no-repeat;
+  background-position: left 0 bottom 60px, right 0 bottom 60px;
+
+  @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/about-background-leftx2.png),
+      url(../images/about-background-rightx2.png);
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 130px 0 70px 0;
+    background-image: none;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 125px 0 39px 0;
+    background-image: url(../images/about-background-left.png),
+      url(../images/about-background-right.png);
+    background-size: auto 534px, auto 534px;
+    background-repeat: no-repeat;
+    background-position: left 0 bottom -65px, right 0 bottom -65px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/about-background-leftx2.png),
+        url(../images/about-background-rightx2.png);
+    }
+  }
+
   &__container {
     @extend .container;
     padding: 0 20px;

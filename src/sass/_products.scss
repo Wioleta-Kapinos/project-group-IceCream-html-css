@@ -3,6 +3,17 @@
 
 .products {
   @include var.flexBox($direction: null, $justify: center, $align: null, $wrap: null, $gap: null);
+  padding: 121px 0 98px 0;
+  background-color: #fff;
+
+  @media screen and (min-width: 768px) {
+    padding: 122px 0 112px 0;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 127px 0 119px 0;
+  }
+
   &__container {
     @extend .container;
     @include var.flexBox(
