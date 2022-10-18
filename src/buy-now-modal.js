@@ -1,16 +1,16 @@
 (() => {
   const refs = {
-    openModalBtn: document.querySelector('[data-buy-now-modal-open]'),
-    openModalBtnMobile: document.querySelector('[data-buy-now-modal-open-mobile]'),
-    closeModalBtn: document.querySelector('[data-buy-now-modal-close]'),
-    modal: document.querySelector('[data-buy-now-modal]'),
+    openModalBtnBuy: document.querySelector('[data-buy-now-modal-open]'),
+    openModalBtnBuyMobile: document.querySelector('[data-buy-now-modal-open-mobile]'),
+    closeModalBtnBuy: document.querySelector('[data-buy-now-modal-close]'),
+    modalBuy: document.querySelector('[data-buy-now-modal]'),
   };
 
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.openModalBtnMobile.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
+  refs.openModalBtnBuy.addEventListener('click', toggleModal);
+  refs.openModalBtnBuyMobile.addEventListener('click', toggleModal);
+  refs.closeModalBtnBuy.addEventListener('click', toggleModal);
 
   function toggleModal() {
-    refs.modal.classList.toggle('is-hidden');
+    refs.modalBuy.classList.toggle('is-hidden');
   }
 })();

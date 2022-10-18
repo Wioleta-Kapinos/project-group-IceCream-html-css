@@ -1,7 +1,7 @@
 @use './variables' as var;
 @use './global';
 
-.backdrop {
+.buy-now-backdrop {
   position: fixed;
   left: 0;
   right: 0;
@@ -13,7 +13,7 @@
   z-index: 999;
 }
 
-.backdrop__container {
+.buy-now-backdrop__container {
   position: absolute;
   width: 400px;
   height: 620px;
