@@ -2,6 +2,16 @@
 @use './global';
 
 .reviews {
+  padding: 80px 0 0 0;
+
+  @media screen and (min-width: 768px) {
+    padding: 121px 0 0 0;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 123px 0 0 0;
+  }
+
   &__container {
     @extend .container;
     max-width: 480px;

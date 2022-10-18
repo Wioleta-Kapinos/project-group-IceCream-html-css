@@ -2,21 +2,49 @@
 @use './global';
 
 .contacts {
+  margin-top: 170px;
+  background-color: #fff5f6;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 197px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 234px;
+    background-image: url(../images/contacts-background-left.png),
+      url(../images/contacts-background-right.png);
+    background-size: auto 382px, auto 382px;
+    background-repeat: no-repeat;
+    background-position: left 0 top 0px, right 0 top 0px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/contacts-background-leftx2.png),
+        url(../images/contacts-background-rightx2.png);
+    }
+  }
+
   &__container {
     @extend .container;
     padding: 0 20px;
   }
+
+  &__header {
+    display: none;
+  }
 }
-.contacts-header {
-  display: none;
-}
+
 .city {
-  padding-top: 25px;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 186%;
-  letter-spacing: 0.04em;
-  color: #000000;
+  &__name {
+    padding-top: 25px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 186%;
+    letter-spacing: 0.04em;
+    color: #000000;
+  }
+
   &__list {
     list-style: none;
     display: flex;
@@ -52,7 +80,7 @@
       background-color: #c2e297;
     }
   }
-  &__wrapper {
+  &__item {
     position: relative;
     top: -84px;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
@@ -63,7 +91,7 @@
     background-color: #ffffff;
     flex-basis: 100%;
   }
-  &__des {
+  &__text {
     padding: 10px 0 25px;
     font-weight: 500;
     font-size: 12px;
@@ -150,7 +178,7 @@
   }
 
   .city {
-    &__des {
+    &__text {
       padding-bottom: 30px;
     }
     &__contacts {
@@ -159,7 +187,7 @@
     &__work-hours {
       padding: 30px 0;
     }
-    &__wrapper {
+    &__item {
       top: -78px;
       padding: 50px 32px;
       max-width: 330px;
@@ -179,7 +207,7 @@
   }
 
   .city {
-    &__des {
+    &__text {
       padding-bottom: 32px;
     }
     &__contacts {
@@ -188,7 +216,7 @@
     &__work-hours {
       padding: 32px 0;
     }
-    &__wrapper {
+    &__item {
       top: -102px;
       padding: 62px 42px;
       & * {
