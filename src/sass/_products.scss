@@ -50,6 +50,7 @@
     max-width: 440px;
     border-radius: 24px;
     padding: 161px 41px 41px 39px;
+    flex-basis: 100%;
     @include var.flexBox(
       $direction: column,
       $justify: null,
@@ -57,7 +58,6 @@
       $wrap: null,
       $gap: null
     );
-    flex-basis: 100%;
     &--ice-cream {
       @extend .products__item;
       background-color: #ffb8ca;
