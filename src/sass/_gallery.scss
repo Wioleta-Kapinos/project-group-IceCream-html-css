@@ -8,3 +8,11 @@
     @extend .container;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .gallery {
+    &__container {
+      max-width: 480px;
+    }
+  }
+}
