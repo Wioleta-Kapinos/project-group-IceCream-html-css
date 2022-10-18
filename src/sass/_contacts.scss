@@ -153,6 +153,9 @@
         font-size: 14px;
       }
     }
+    &__address:hover, &__address:focus{
+      color: deepskyblue;
+    }
   }
 }
 
