@@ -26,6 +26,11 @@
   &__reviews {
     padding: 80px 0 86px 0;
   }
+  
+  &__contacts {
+    margin-top: 170px;
+    background-color: #fff5f6;
+ }
 }
 
 @media screen and (min-width: 768px) {
@@ -46,6 +51,10 @@
     &__reviews {
       padding: 121px 0 119px 0;
     }
+    
+    &__contacts {
+      margin-top: 197px;
+    }
   }
 }
 
@@ -63,6 +72,10 @@
 
     &__reviews {
       padding: 123px 0 132px 0;
+    }
+    
+    &__contacts {
+      margin-top: 234px;
     }
   }
 }
