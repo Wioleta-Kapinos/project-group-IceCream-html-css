@@ -171,9 +171,11 @@
       height: 11.84px;
       fill: #d31342;
     }
+    &:hover,
     &:hover {
       fill: #d31342;
       transition: fill 250ms;
+      cursor: pointer;
     }
   }
 }
