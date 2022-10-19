@@ -60,6 +60,12 @@
   &__contact-text--phone {
     color: #d41443;
     text-decoration: none;
+    transition: color 250ms;
+    &:hover,
+    &:focus {
+      transition: color 250ms;
+      color: #ffa5ba;
+    }
   }
   &__copyright {
     display: flex;
@@ -86,6 +92,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: fill 250ms, background-color 250ms;
 }
 .social-media__icon {
   width: 18.82px;
@@ -95,6 +102,7 @@
 .social-media:hover,
 .social-media:focus {
   background-color: #d41443;
+  transition: fill 250ms, background-color 250ms;
 }
 
 @media screen and (max-width: 767px) {
