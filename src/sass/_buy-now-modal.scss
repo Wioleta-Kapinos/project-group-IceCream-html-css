@@ -18,6 +18,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 23px;
   background: linear-gradient(
     90deg,
     rgba(255, 184, 202, 1) 19%,
@@ -36,7 +37,7 @@
 
 .buy-now-backdrop__box {
   width: 320px;
-  height: 510px;
+  height: 490px;
   border-radius: 4px;
 
   @media screen and (min-width: 768px) {
@@ -46,11 +47,12 @@
 }
 
 .close-button {
+  transition: background-color 250ms;
   position: relative;
-  left: 294px;
+  left: 290px;
   width: 22px;
   height: 22px;
-  top: 4px;
+  top: 0px;
   @include var.flexBox(row, center, center);
   background: transparent;
   border-radius: 50%;
@@ -60,7 +62,8 @@
   stroke: #d41443;
 
   @media screen and (min-width: 768px) {
-    left: 416px;
+    left: 410px;
+    top: 7px;
     width: 30px;
     height: 30px;
   }
@@ -90,32 +93,51 @@
   width: 320px;
   height: 560px;
   padding: 5px 25px 25px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @media screen and (min-width: 768px) {
     width: 450px;
     height: 650px;
     padding: 10px 40px 40px 40px;
   }
-
+  &__area {
+    border-radius: 8px;
+  }
+  &__select-area {
+    border-radius: 4px;
+  }
   &__heading {
-    text-align: center;
-    padding-top: 5px;
-    margin-bottom: 5px;
-    @include var.fontStyle(12px, 140%, 0.04em, 400, normal);
     font-family: var.$brand-font-family;
+    @include var.fontStyle(18px, 14px, 0.06em, 400, normal);
+    text-align: center;
+    margin-bottom: 10px;
     text-transform: uppercase;
     color: #d41443;
     @include var.flexBox(row, center, center);
 
     @media screen and (min-width: 768px) {
-      font-size: 16px;
+      font-size: 28px;
       padding-top: 0px;
-      margin-bottom: 8px;
+      margin-bottom: 15px;
       line-height: 23px;
     }
   }
 
   &__text {
+    font-family: var.$brand-font-family;
+    @include var.fontStyle(12px, 120%, 0.04em, 400, normal);
+    text-transform: uppercase;
+    color: #d41443;
+
+    @media screen and (min-width: 768px) {
+      font-size: 16px;
+      line-height: 23px;
+    }
+  }
+
+  &__text-min {
     font-family: var.$brand-font-family;
     @include var.fontStyle(10px, 120%, 0.04em, 400, normal);
     text-transform: uppercase;
@@ -123,20 +145,7 @@
 
     @media screen and (min-width: 768px) {
       font-size: 14px;
-      line-height: 23px;
-    }
-  }
-
-  &__text-min {
-    font-family: var.$brand-font-family;
-    @include var.fontStyle(9px, 120%, 0.04em, 400, normal);
-    text-transform: uppercase;
-    color: #d41443;
-    padding-bottom: 30px;
-
-    @media screen and (min-width: 768px) {
-      font-size: 12px;
-      line-height: 23px;
+      line-height: 25px;
     }
   }
 
@@ -165,6 +174,7 @@
     font-family: var.$main-font-family;
     @include var.fontStyle(10px, 23px, 0.04em, 400, normal);
     border: none;
+    border-radius: 4px;
 
     &:focus {
       border: 1px solid #f0d1a5;
@@ -202,7 +212,7 @@
 
   &__label-comment {
     text-align: center;
-    padding: 10px 2px 0px 2px;
+    padding: 20px 2px 0px 2px;
 
     &:focus-within .order-form__text {
       color: #e71b4e;
@@ -213,14 +223,15 @@
     background-color: #ffffff;
     border: 1px dotted #f0d1a5;
     width: 100%;
-    padding-left: 5px;
+    padding-left: 10px;
     padding-top: 5px;
     font-family: var.$main-font-family;
     @include var.fontStyle(10px, 120%, 0.04em, 400, normal);
     resize: none;
     outline: none;
     margin-top: 5px;
-    height: 50px;
+    height: 75px;
+    border-radius: 8px;
 
     &:focus {
       transform: scale(101%);
@@ -228,7 +239,7 @@
     }
 
     @media screen and (min-width: 768px) {
-      height: 70px;
+      height: 85px;
       line-height: 23px;
     }
   }
@@ -248,32 +259,41 @@
   &__order {
     width: 100%;
     margin-top: 10px;
-    margin-left: 27px;
-
-    @media screen and (min-width: 768px) {
-      margin-left: 42px;
-    }
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
   }
 
   &__products {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(3, auto);
-    grid-column-gap: 2px;
-    grid-row-gap: 2px;
+    display: flex;
+    justify-content: center;
+    gap: 66px;
+    @media screen and (min-width: 768px) {
+      gap: 44px;
+    }
   }
 
   &__flavour {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
     width: 120px;
-
     @media screen and (min-width: 768px) {
-      width: 150px;
+      gap: 0px;
     }
   }
 
   &__amount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
     width: 80px;
+    @media screen and (min-width: 768px) {
+      gap: 0px;
+    }
   }
 }
 
@@ -285,37 +305,37 @@ textarea::placeholder {
 .order-button {
   margin-top: 6px;
   width: 100%;
+  transition: background 250ms;
   @include var.flexBox(row, center, center);
 
-  @media screen and (min-width: 768px) {
-    margin-top: 8px;
-  }
-
   &__container {
-    width: 70px;
-    height: 25px;
+    width: 82px;
+    height: 30px;
     background: transparent;
     border: 1px dotted #f0d1a5;
+    border-radius: 8px;
+    transition: background-color 250ms;
 
     &:hover,
     &:focus {
+      transition: background 250ms;
       background: #ffffff59;
     }
 
     @media screen and (min-width: 768px) {
-      width: 90px;
-      height: 35px;
+      width: 100px;
+      height: 42px;
     }
   }
 
   &__text {
     font-family: var.$brand-font-family;
-    @include var.fontStyle(12px, 23px, 0.04em, 400, normal);
+    @include var.fontStyle(16px, 23px, 0.04em, 400, normal);
     text-transform: uppercase;
     color: #d41443;
 
     @media screen and (min-width: 768px) {
-      font-size: 16px;
+      font-size: 20px;
       line-height: 23px;
     }
   }
